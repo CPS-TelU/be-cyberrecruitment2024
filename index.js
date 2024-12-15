@@ -8,6 +8,7 @@ const registerPracticum = require("./routes/registerPracticumRoutes")
 let corsOptions = {
   origin: [
     "http://localhost:3000",
+    "https://cpslaboratory.com",
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true,
