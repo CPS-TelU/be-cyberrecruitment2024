@@ -13,6 +13,10 @@ const registerUserService = async (
     major,
     document,
   ) => {
+    if (!name || !nim || !email || !className || !noHp || !gender || !faculty || !year || !major || !document) {
+      throw new Error("All fields are required!");
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
     if (!emailRegex.test(email)) {

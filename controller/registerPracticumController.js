@@ -16,12 +16,10 @@ const registerUser = async (req, res) => {
           req.body.github
         );
     
-        const { password, ...userWithoutPassword } = user;
-    
         return res.status(201).json({
           status: true,
           message: `Account created`,
-          data: userWithoutPassword,
+          data: user,
         });
       } catch (error) {
         return res.status(400).json({
